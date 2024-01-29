@@ -1,0 +1,57 @@
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+/* Adaugă o clasă specifică imaginilor pentru a aplica stilurile de dimensiune */
+.food-image {
+    width: 230px; /* Schimbă dimensiunea la valoarea dorită */
+    height: 500px; /* Schimbă dimensiunea la valoarea dorită */
+    object-fit: cover; /* Ajustează modul de redare a imaginilor pentru a acoperi întregul container */
+    border-radius: 80px; /* Adaugă colțuri rotunjite pentru un aspect mai plăcut */
+  }
+  
+  /* Restul stilurilor pentru alte elemente, dacă este necesar */
+  
+  
+ul li a{
+    height: 22.5rem;
+    width: 20rem;
+    border: 1px solid whitesmoke;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: #e72929;
+}
+
+
+.content{
+    padding: .5rem 1rem;
+    position: relative;
+}
+
+.favorite{
+    position: absolute;
+    top: .5rem;
+    right: 1rem;
+    font-size: 1.2rem;
+}
+
+.favorite.not{
+
+    color: gray;
+}
+
+.cook-time {
+font-size:  .8rem;
+flex: 3;
+text-align: right;
+}
+.price{
+    color: #414141;
+}

@@ -1,0 +1,59 @@
+1-Schema sa FAC HomeComponent PE PRIMA PAGINA:
+    -Creez HomeComponent
+    -bag path in routare pe HomeComponent si pun router link
+
+
+2-Cum afisez imaginile cu proprietatile in HomeComponent:
+ 
+       -Fac un Service unde pun funtia getall() care imi ia toate proprietatile sub forma de 
+manunchiuri de informatii  , am sa trec prin fiecare manunchi la afisare in HTML
+
+       -Injectez service-ul in Home Component in foodService
+
+       -pun in foods tot manunchiul de proprietati si pozele
+
+       -Ca sa Afisez in HTML am nevoie si de un sablon de cum sa arate , asa ca fac food.ts in care fac sablonul
+
+       -in HTML afisez cu  am let food of Foods si {{elementele}}
+
+3-SearchBar
+   -Fac o ruta {path:'search/:searchTerm', component:HomeComponent} , searchtermul va fi ce caut practic in searchbar
+
+   -import Activated Route home.component.ts: import { ActivatedRoute } from '@angular/router';  , pentru
+        a reusi sa accesez parametrii componentelor , in cazul nostru vrem sa vedem daca o sa se schimbe searchTerm 
+
+   if(-in caz ca s a schimbat ceva in routare ( asta face subscribe, cand vede ca se schimba https-ul face comanezile:) am sa
+    schimb totul in litere mici (si search-termeenii si ce am cautat eu (params),
+        si daca search term este inclus in food (food este multitudinea de mancaruri) , 
+        atunci foods (adica mancarurile pe care le afisez pe homepage ) o sa fie egale cu termenul care are in compozitie searchtermu-ul
+        (adica ce am cautat eu)    ex code:NgOnInit(): void {
+        this.route.params.subscribe(params =>
+        { if (params.searchTerm)
+          this.foods =this.foodsService.getAll().filterfood............()
+        
+        })      
+        })
+else(
+-in caz ca nu , afisez toate mancarurile 
+
+       -Mai departe facem functie care sa scrie in URL ce scriu searchbar , CA SA FAC SUBCRIBE cA SA OBSERV 
+       Rutele si URL urile , iar ca sa schimb URL sau rute import si injectez router 
+
+-Folosesc two way binding , pana acum am doar one way binding , in sensul ca de la searchterm scris in url il pun si in searchbar
+,iar prin two way binding bag si invers (din searchbar in url) ,asa ca fac [(ngModel="seachTerm")] , searchTerm in cazul 
+nostru e two wway data binding , el trebuie sa fie si in url si in searchbar 
+
+        Import FormsModule ca sa folosesc ngModel databinding 
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,97 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header {
+    background-color: #1e1e1e;
+    color: #86b3d1;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #86b3d1;
+  }
+  
+  .nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav li {
+    margin-left: 20px;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: #86b3d1;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .nav a:hover {
+    color: #557c94;
+  }
+  
+  .cart {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #86b3d1;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .cart:hover {
+    color: #557c94;
+  }
+  
+  .cart-icon {
+    margin-right: 5px;
+    font-size: 1.2rem;
+  }
+  
+  .cart-title {
+    font-size: 1rem;
+  }
+  
+  /* Stilizare pentru aspect futurist */
+  .logo,
+  .nav,
+  .cart {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav a,
+  .cart {
+    font-size: 1rem;
+  }
+  
+  .nav a {
+    margin-left: 20px;
+  }
+  
+  .cart {
+    margin-left: auto; /* Acesta va muta elementul "Cart" la capătul dreapta al containerului */
+  }
+  
+  /* Animatie futurista la hover */
+  .nav a:hover,
+  .cart:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+  
